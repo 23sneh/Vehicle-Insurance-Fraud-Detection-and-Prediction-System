@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .result-container {
+            width: 70%;
+            max-width: 900px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .prediction {
+            font-size: 36px;
+            color: #28a745;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Fraud Detection Result</h1>
+        <p>Based on the provided information, the prediction result is:</p>
+        <h2 class="prediction">{{ prediction_result }}</h2>
+    </div>
+    <div class="footer">
+        <p>Thank you for using our Fraud Detection Web App!</p>
+    </div>
+</body>
+</html>
